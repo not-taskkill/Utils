@@ -35,10 +35,6 @@ else
 	PARENT = Main
 end
 
-local ChamStorage = Instance.new("Folder")
-ChamStorage.Name = "TaskKill's ChamStorage"
-ChamStorage.Parent = PARENT
-
 local function toTable(v)
 	if typeof(v) == "Instance" then
 		return {v}
@@ -67,7 +63,7 @@ function ApplyCham.new(Object, Color: Color3, Ancestry)
 		Cham.FillTransparency = 0.65
 		Cham.OutlineTransparency = 0
 
-		Cham.Parent = ChamStorage
+		Cham.Parent = PARENT
 		Cham.Adornee = obj
 
 		table.insert(Chams, Cham)
